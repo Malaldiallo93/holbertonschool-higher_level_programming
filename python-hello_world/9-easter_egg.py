@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-import this
+print("Le Zen de Python, par Tim Peters")
 
