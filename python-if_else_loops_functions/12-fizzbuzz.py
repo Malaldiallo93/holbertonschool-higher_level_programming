@@ -9,9 +9,3 @@ def fizzbuzz():
             print("Buzz", end=" ")
         else:
             print(i, end=" ")
-
-#!/usr/bin/env python3
-fizzbuzz = __import__('12-fizzbuzz').fizzbuzz
-
-fizzbuzz()
-print("")
