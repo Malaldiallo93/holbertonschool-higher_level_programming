@@ -9,9 +9,11 @@ class Square:
         self.__size = 0
         self.size = size
 
+    """Property def size(self): to retrieve it"""
     def size(self):
         return self.__size
 
+    """Property setter def size(self, value): to set it"""
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
