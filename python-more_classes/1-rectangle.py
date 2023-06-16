@@ -10,7 +10,7 @@ Args:
 
 
 class Rectangle:
-    """Defines a rectangle with width and height"""
+    """Define your rectangle with width and height"""
     def __init__(self, width=0, height=0):
         self._width = 0
         self._height = 0
@@ -19,7 +19,7 @@ class Rectangle:
 
     @property
     def width(self):
-        return self._width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -31,7 +31,7 @@ class Rectangle:
 
     @property
     def height(self):
-        return self._height
+        return self.__height
 
     @height.setter
     def height(self, value):
