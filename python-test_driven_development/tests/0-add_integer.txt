@@ -1,0 +1,35 @@
+The 0-add_integer module
+========================
+
+Using add_integer
+-----------------
+
+First import add_integer from the 0-add_integer module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+    >>> add_integer(1, 2)
+    3
+
+    >>> add_integer(100, -2)
+    98
+
+    >>> add_integer(2)
+    100
+
+    >>> add_integer(100.3, -2)
+    98
+
+    >>> add_integer(4, "School")
+    TypeError('b must be an integer')
+
+    >>> add_integer(None)
+    TypeError('a must be an integer')
+
+    >>> add_integer(3.2, 4.12)
+    7
+
+    >>> add_integer("Holbies", 3.2)
+    TypeError('a must be an integer')
