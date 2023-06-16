@@ -12,7 +12,7 @@ Args:
 class Rectangle:
     """Define your rectangle with width and height"""
     def __init__(self, width=0, height=0):
-        self._width = 0
+       # self._width = 0
         self._height = 0
         self.width = width
         self.height = height
