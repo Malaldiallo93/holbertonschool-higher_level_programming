@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base class"""
 import json
+import os
 
 
 class Base:
@@ -61,3 +62,33 @@ class Base:
         if json_string is None:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns an instance with all attributes already set
+
+        Args:
+            **dictionary (dict): dict of set attributes
+        """
+        if cls.__name__ == "Rectangle":
+            """width and height are mandatory attributes"""
+            dummy = cls(1, 1)
+        else:
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        filename = cls.__name__ + ".json"
+        if not os.path.exists(filename):
+            return []
+
+        with open(filename, "r") as f:
+            file_content = f.read()
+
+        instances_dict = cls.from_json_string(file_content)
+        instances = [cls.create(**data) for data in instances_dict]
+
+        return instances

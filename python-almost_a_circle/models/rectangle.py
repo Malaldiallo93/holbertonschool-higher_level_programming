@@ -141,4 +141,3 @@ class Rectangle(Base):
         """Return description of the rectangle"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y}\
  - {self.width}/{self.height}"
- 
